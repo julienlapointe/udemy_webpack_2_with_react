@@ -29,14 +29,14 @@ module.exports = {
 				// order is important: css-loader must be on right / must load first
 				// css-loader opens / reads the CSS files
 				// style-loader puts the CSS styles in a <style> tag inside the <head> tag at the top of HTML documents... 
-				// use: ["style-loader", "css-loader"],
+				use: ["style-loader", "css-loader"],
 				// ---
 				// ^ this breaks some CSS conventions so we use the ExtractTextPlugin to save the CSS in a separate file 
 				// Note: "use" (new) and "loader" (legacy) properties are the same
 				// plugins and loaders are *not* the same... output from loaders must go into bundle.js, but plugins can withhold output from bundle.js (which we need in order to put our CSS into a separate file)
-				loader: ExtractTextPlugin.extract({
-					loader: 'css-loader'
-				}),
+				// loader: ExtractTextPlugin.extract({
+					// loader: 'css-loader'
+				// }),
 				// any files with .css extension will be sent to these loaders (listed in the line below) for pre-processing
 				test: /\.css$/
 			},
@@ -56,6 +56,6 @@ module.exports = {
 	},
 	plugins: [
 		// any CSS from .css files caught by css-loader in the rule above will get compiled and outputted into a single styles.css file
-		new ExtractTextPlugin('styles.css')
+		// new ExtractTextPlugin('styles.css')
 	]
 };
