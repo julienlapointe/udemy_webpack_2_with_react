@@ -32,7 +32,6 @@ module.exports = {
 				// use: ["style-loader", "css-loader"],
 				// ---
 				// ^ this breaks some CSS conventions so we use the ExtractTextPlugin to save the CSS in a separate file 
-				// learning #9
 				// Note: "use" (new) and "loader" (legacy) properties are the same
 				// plugins and loaders are *not* the same... output from loaders must go into bundle.js, but plugins can withhold output from bundle.js (which we need in order to put our CSS into a separate file)
 				loader: ExtractTextPlugin.extract({
