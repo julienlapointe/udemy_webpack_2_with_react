@@ -1,4 +1,3 @@
 {
-	"presets": ["babel-preset-env", "react"],
-	"plugins": ["dynamic-import-webpack", "syntax-dynamic-import"]
+	"presets": ["babel-preset-env", "react"]
 }
