@@ -104,6 +104,12 @@ module.exports = {
 		// generates the <script> tags for all .js files outputted by Webpack and adds them into the index_template.html file
 		new HtmlWebpackPlugin({
 			template: "src/index_template.html"
+		}),
+		// React looks for window.NODE_ENV when it boots up on user's browser
+		// if NODE_ENV is set to "production", then React performs less error checking to increase performance
+		// DefinePlugin defines the window-scoped variable "process.env.NODE_ENV"
+		new webpack.DefinePlugin({
+			"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
 		})
 	]
 };

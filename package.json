@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "webpack": "npm run clean && webpack",
+    "//": [
+      "this is a comment for the line below: 'NODE_ENV=production' tells Webpack to run in 'production' mode when we run 'npm run webpack'",
+      "'-p' tells Webpack to output production-ready, minified JS files"
+    ],
+    "webpack": "NODE_ENV=production npm run clean && webpack -p",
     "serve": "webpack-dev-server"
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
