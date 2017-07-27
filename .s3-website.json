@@ -1,0 +1,11 @@
+{
+   "index": "index.html",
+   "region": "us-east-1",
+   "uploadDir": "dist",
+   "prefix": "",
+   "corsConfiguration": [],
+   "enableCloudfront": false,
+   "retries": 20,
+   "domain": "udemy-webpack-2-tutorial",
+   "configFile": ".s3-website.json"
+}
