@@ -10,7 +10,8 @@
       "'-p' tells Webpack to output production-ready, minified JS files"
     ],
     "webpack": "NODE_ENV=production npm run clean && webpack -p",
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "deploy": "npm run webpack && git subtree push --prefix dist github gh-pages"
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
   "author": "",
