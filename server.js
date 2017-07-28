@@ -1,6 +1,7 @@
 // express server
 const express = require("express");
-
+// add "path" module
+const path = require("path");
 
 // object of express server
 const app = express();
@@ -21,8 +22,6 @@ if (process.env.NODE_ENV !== "production") {
 	app.use(expressWebpackMiddleware(webpack(webpackConfig)));
 // otherwise, we are in "prod" environment...
 } else {
-	// add "path" module
-	const path = require("path");
 	// respond to HTTP requests from users with the assets from "dist" directory
 	// tells Express to make all files inside "dist" folder available to user (similar to a "public_html" folder?)
 	app.use(express.static("dist"));
