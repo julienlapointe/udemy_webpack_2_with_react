@@ -1,7 +1,6 @@
 // express server
 const express = require("express");
 
-
 // object of express server
 const app = express();
 
@@ -32,7 +31,6 @@ if (process.env.NODE_ENV !== "production") {
 		res.sendFile(path.join(__dirname, "dist/index.html"));
 	});
 }
-
 
 // listens for incoming HTTP requests from user
 // app.listen(3050, () => console.log("Listening..."))
