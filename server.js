@@ -38,3 +38,10 @@ if (process.env.NODE_ENV !== "production") {
 // app.listen(3050, () => console.log("Listening..."))
 // if host specifies PORT in "prod" environment, then use their PORT... otherwise use 3050 ("dev" environment)
 app.listen(process.env.PORT || 3050, () => console.log("Listening..."))
+
+// Note re: deploying to Heroku
+// create a Procfile in root folder
+// Procfile is automatically executed by Heroku 
+// Procfile tells Heroku what command to run when we want to start our server
+// web: node server.js
+// "web" indicates that this is a "web server"
