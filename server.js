@@ -37,7 +37,7 @@ if (process.env.NODE_ENV !== "production") {
 // listens for incoming HTTP requests from user
 // app.listen(3050, () => console.log("Listening..."))
 // if host specifies PORT in "prod" environment, then use their PORT... otherwise use 3050 ("dev" environment)
-app.listen(process.env.PORT || 3050, () => console.log("Listening..."))
+app.listen(process.env.PORT || 3050, () => console.log("Listening..."));
 
 // Note re: deploying to Heroku
 // create a Procfile in root folder
