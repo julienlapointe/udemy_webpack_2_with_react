@@ -15,7 +15,8 @@
     ],
     "webpack": "NODE_ENV=production npm run clean && webpack -p",
     "serve": "webpack-dev-server",
-    "deploy": "npm run webpack && git subtree push --prefix dist github gh-pages"
+    "deploy": "npm run webpack && git subtree push --prefix dist github gh-pages",
+    "postinstall": "npm update && npm install package-name"
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
   "author": "",
