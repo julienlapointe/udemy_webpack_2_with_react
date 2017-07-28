@@ -1,13 +1,12 @@
 // express server
 const express = require("express");
-// add "path" module
-const path = require("path");
+
 
 // object of express server
 const app = express();
 
 // add routes here...
-app.get("/hello", (req, res) => res.send({hi: "there"}));
+// app.get("/hello", (req, res) => res.send({hi: "there"}));
 
 // if in "dev" environment (not in "prod" environment), then...
 // note for deployment: need to Google how to set process.env.NODE_ENV value (varies from host to host)
@@ -22,6 +21,8 @@ if (process.env.NODE_ENV !== "production") {
 	app.use(expressWebpackMiddleware(webpack(webpackConfig)));
 // otherwise, we are in "prod" environment...
 } else {
+	// add "path" module
+	const path = require("path");
 	// respond to HTTP requests from users with the assets from "dist" directory
 	// tells Express to make all files inside "dist" folder available to user (similar to a "public_html" folder?)
 	app.use(express.static("dist"));
